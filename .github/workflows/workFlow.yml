@@ -1,7 +1,9 @@
 name: First Workflow
 run-name: ${{github.actor}}
-on: workflow_dispatch
- 
+on:
+ issues:
+  -types: 
+   - opened
 jobs:
  job1:
   runs-on: ubuntu-latest
